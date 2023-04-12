@@ -4,7 +4,7 @@ import babyGirl from "../../assets/baby-girl.jpg";
 import babyBoy from "../../assets/baby-boy.jpg";
 import { NameProps } from "../../pages/Home";
 
-type CardProps = {
+export type CardProps = {
 	baby: NameProps | null;
 };
 
