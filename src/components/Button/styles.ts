@@ -8,6 +8,7 @@ export const CustomButton = styled.button`
 	padding: 1.8rem 0;
 	font-size: 1.2rem;
 	font-weight: 600;
+	color: #ffffff;
 	background-color: #1a1a1a;
 	cursor: pointer;
 	transition: all 0.25s ease-in-out;
