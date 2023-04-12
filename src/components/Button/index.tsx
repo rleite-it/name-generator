@@ -6,12 +6,12 @@ export type ButtonProps = {
 	type: "submit" | "reset" | "button" | undefined;
 	value: string;
 	onClick: MouseEventHandler<HTMLButtonElement> | undefined;
-	status?: boolean;
+	isLoading?: boolean;
 };
 
-const Button = ({ type, value, onClick, status }: ButtonProps) => {
+const Button = ({ type, value, onClick, isLoading }: ButtonProps) => {
 	return (
-		<CustomButton type={type} onClick={onClick} disabled={status}>
+		<CustomButton type={type} onClick={onClick} disabled={isLoading}>
 			{value}
 		</CustomButton>
 	);
