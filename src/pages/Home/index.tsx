@@ -24,15 +24,17 @@ const Home = () => {
 
 	const { t } = useTranslation();
 
-	useEffect(() => {
+	const fetchNames = async () => {
 		try {
-			axios
-				.get("./data/names.json")
-				.then((response) => setNames(response.data))
-				.catch((error) => console.error(error));
+			const response = await axios.get("./data/names.json");
+			setNames(response.data);
 		} catch (error) {
 			console.error(error);
 		}
+	};
+
+	useEffect(() => {
+		fetchNames();
 	}, []);
 
 	const generateName = (gender: string) => {
@@ -71,16 +73,12 @@ const Home = () => {
 			</GenderFilter>
 
 			<CardWrapper>
-				{previousGenerates.length ? (
-					!loading ? (
-						<Card baby={lastName} />
-					) : (
-						<Loading width="5rem" height="5rem" color="#fff" />
-					)
-				) : !loading ? (
-					<Try>{t("home_page.try")}</Try>
+				{loading ? (
+					<Loading />
+				) : previousGenerates.length ? (
+					<Card baby={lastName} />
 				) : (
-					<Loading width="5rem" height="5rem" color="#fff" />
+					<Try>{t("home_page.try")}</Try>
 				)}
 			</CardWrapper>
 		</Wrapper>
