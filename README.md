@@ -1,6 +1,6 @@
 # Name Generator
 
-![Screenshot of Name Generator](insert screenshot url here)
+![Screenshot of Name Generator](https://user-images.githubusercontent.com/77971800/231315618-a89ed741-9cbd-4625-8ba8-c9b547b026e0.png)
 
 ## Overview
 
