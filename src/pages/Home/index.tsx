@@ -6,6 +6,7 @@ import axios from "axios";
 import { Loading } from "../../icons/Loading";
 import { randomName } from "./utils";
 import { useTranslation } from "react-i18next";
+import { Gender } from "../../constants/enums";
 
 export type NameProps = {
 	birthYear: string;
@@ -37,7 +38,7 @@ const Home = () => {
 		fetchNames();
 	}, []);
 
-	const generateName = (gender: string) => {
+	const generateName = (gender: Gender) => {
 		setLoading(true);
 		setTimeout(() => {
 			setLoading(false);
@@ -60,14 +61,14 @@ const Home = () => {
 			<GenderFilter>
 				<Button
 					type="button"
-					value="male"
-					onClick={() => generateName("MALE")}
+					value={Gender.Male}
+					onClick={() => generateName(Gender.Male)}
 					isLoading={loading}
 				/>
 				<Button
 					type="button"
-					value="female"
-					onClick={() => generateName("FEMALE")}
+					value={Gender.Female}
+					onClick={() => generateName(Gender.Female)}
 					isLoading={loading}
 				/>
 			</GenderFilter>
