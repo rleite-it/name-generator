@@ -57,13 +57,13 @@ const Home = () => {
 					type="button"
 					value="Male"
 					onClick={() => generateName("MALE")}
-					status={loading}
+					isLoading={loading}
 				/>
 				<Button
 					type="button"
 					value="Female"
 					onClick={() => generateName("FEMALE")}
-					status={loading}
+					isLoading={loading}
 				/>
 			</GenderFilter>
 
