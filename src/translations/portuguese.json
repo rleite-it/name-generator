@@ -1,0 +1,12 @@
+{
+	"translation": {
+		"home_page": {
+			"title": "Gerador de Nomes",
+			"try": "Experimenta!"
+		},
+		"button": {
+			"male": "Masculino",
+			"female": "Feminino"
+		}
+	}
+}

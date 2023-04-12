@@ -1,6 +1,7 @@
 import React, { MouseEventHandler } from "react";
 import { CustomButton } from "./styles";
 import { Loading } from "../../icons/Loading";
+import { useTranslation } from "react-i18next";
 
 export type ButtonProps = {
 	type: "submit" | "reset" | "button" | undefined;
@@ -10,9 +11,11 @@ export type ButtonProps = {
 };
 
 const Button = ({ type, value, onClick, isLoading }: ButtonProps) => {
+	const { t } = useTranslation();
+
 	return (
 		<CustomButton type={type} onClick={onClick} disabled={isLoading}>
-			{value}
+			{t(`button.${value}`)}
 		</CustomButton>
 	);
 };

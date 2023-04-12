@@ -5,6 +5,7 @@ import Card from "../../components/Card";
 import axios from "axios";
 import { Loading } from "../../icons/Loading";
 import { randomName } from "./utils";
+import { useTranslation } from "react-i18next";
 
 export type NameProps = {
 	birthYear: string;
@@ -20,6 +21,8 @@ const Home = () => {
 	const [previousGenerates, setPreviousGenerates] = useState<string[][]>([]);
 	const [lastName, setLastName] = useState<NameProps | null>(null);
 	const [loading, setLoading] = useState<boolean>(false);
+
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		try {
@@ -51,17 +54,17 @@ const Home = () => {
 
 	return (
 		<Wrapper>
-			<Title>Name Generator</Title>
+			<Title>{t("home_page.title")}</Title>
 			<GenderFilter>
 				<Button
 					type="button"
-					value="Male"
+					value="male"
 					onClick={() => generateName("MALE")}
 					isLoading={loading}
 				/>
 				<Button
 					type="button"
-					value="Female"
+					value="female"
 					onClick={() => generateName("FEMALE")}
 					isLoading={loading}
 				/>
@@ -75,7 +78,7 @@ const Home = () => {
 						<Loading width="5rem" height="5rem" color="#fff" />
 					)
 				) : !loading ? (
-					<Try>Give it a try!</Try>
+					<Try>{t("home_page.try")}</Try>
 				) : (
 					<Loading width="5rem" height="5rem" color="#fff" />
 				)}

@@ -1,0 +1,12 @@
+{
+	"translation": {
+		"home_page": {
+			"title": "Name Generator",
+			"try": "Give it a try!"
+		},
+		"button": {
+			"male": "Male",
+			"female": "Female"
+		}
+	}
+}
