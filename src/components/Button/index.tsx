@@ -8,13 +8,24 @@ export type ButtonProps = {
 	value: string;
 	onClick: MouseEventHandler<HTMLButtonElement> | undefined;
 	isLoading?: boolean;
+	selected?: boolean;
 };
 
-const Button = ({ type, value, onClick, isLoading }: ButtonProps) => {
+const Button = ({
+	type,
+	value,
+	onClick,
+	isLoading,
+	selected = false,
+}: ButtonProps) => {
 	const { t } = useTranslation();
-
 	return (
-		<CustomButton type={type} onClick={onClick} disabled={isLoading}>
+		<CustomButton
+			type={type}
+			onClick={onClick}
+			disabled={isLoading}
+			selected={selected}
+		>
 			{t(`button.${value}`)}
 		</CustomButton>
 	);

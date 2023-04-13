@@ -14,7 +14,7 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
 	args: {
-		value: "Click me",
+		value: "male",
 		type: "button",
 		onClick: () => alert("Button clicked!"),
 		isLoading: false,
@@ -23,7 +23,7 @@ export const Primary: Story = {
 
 export const Disabled: Story = {
 	args: {
-		value: "Disabled",
+		value: "male",
 		type: "button",
 		onClick: () => alert("Button clicked!"),
 		isLoading: true,

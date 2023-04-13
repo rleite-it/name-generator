@@ -46,8 +46,26 @@ export const CardWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	margin-bottom: 3rem;
 `;
 
 export const Try = styled.h2`
 	font-weight: 600;
+`;
+
+export const EthnicityWrapper = styled.div`
+	margin-top: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+	width: 75%;
+	align-items: center;
+
+	${deviceQueries.tablet} {
+		margin-top: 2rem;
+		width: 60%;
+		justify-content: center;
+	}
 `;

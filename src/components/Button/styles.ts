@@ -9,7 +9,7 @@ export const CustomButton = styled.button`
 	font-size: 1.2rem;
 	font-weight: 600;
 	color: #ffffff;
-	background-color: #1a1a1a;
+	background-color: ${(props) => (props.selected ? "green" : "#1a1a1a")};
 	cursor: pointer;
 	transition: all 0.25s ease-in-out;
 

@@ -6,7 +6,8 @@
 		},
 		"button": {
 			"male": "Male",
-			"female": "Female"
+			"female": "Female",
+			"generate": "Generate"
 		}
 	}
 }
